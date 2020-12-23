@@ -1,9 +1,4 @@
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
   from = "/api/notes"
   to = "https://applicationnotes.000webhostapp.com/api/notes"
   status = 200
