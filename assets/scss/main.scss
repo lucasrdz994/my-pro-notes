@@ -1,0 +1,19 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Dropdown menu
+$dropdown-menu-min-width: 100%;
+$navbar-item-hover-color: $dark;
+
+// Notes sidebar
+$sidebar-width: 20%;
+
+// Colors
+$primary: $turquoise;
+
+// Fonts
+$family-secondary: Centaur, 'Times New Roman', Times, serif;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

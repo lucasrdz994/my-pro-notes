@@ -1,0 +1,29 @@
+{
+  "name": "my-pro-notes",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/proxy": "^2.1.0",
+    "core-js": "^3.6.5",
+    "netlify-identity-widget": "^1.9.1",
+    "nuxt": "^2.14.6",
+    "nuxt-buefy": "^0.4.3",
+    "tiptap": "^1.30.0",
+    "tiptap-extensions": "^1.33.2"
+  },
+  "devDependencies": {
+    "fibers": "^5.0.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0"
+  },
+  "resolutions": {
+    "prosemirror-model": "^1.11.2"
+  }
+}
