@@ -18,8 +18,8 @@
                 <b-icon type="is-dark" icon="account-circle-outline" class="mr-2"></b-icon>
                 <strong>{{ currentUser.user_metadata.full_name }}</strong>
             </template>
-            <b-navbar-item tag="nuxt-link" to="/inspire">
-              Settings
+            <b-navbar-item tag="nuxt-link" to="/notes">
+              Mis notas
             </b-navbar-item>
             <b-navbar-item @click="logout">
               Cerrar sesión
@@ -35,9 +35,9 @@
         </b-navbar-item>
       </template>
     </b-navbar>
-    <div class="container is-fluid my-5">
-      <Nuxt />
-    </div>
+
+    <Nuxt />
+
   </div>
 </template>
 

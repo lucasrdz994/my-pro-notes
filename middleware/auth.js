@@ -10,4 +10,8 @@ export default function({redirect, store, route}) {
     return store.commit('setCurrentUser', netlifyIdentity.currentUser())
   }
 
+  // user
+  const usuario = netlifyIdentity.currentUser()
+  console.log('auth', usuario)
+
 }

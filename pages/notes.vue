@@ -1,14 +1,16 @@
 <template>
-  <section class="columns">
-    <div class="column">
-      <b-button type="is-text" icon-right="arrow-right" @click="setNotesSidebarState(true)">Ver notas</b-button>
-    </div>
+  <div class="container is-fluid my-5">
+    <section class="columns">
+      <div class="column">
+        <b-button type="is-text" icon-right="arrow-right" @click="setNotesSidebarState(true)">Ver notas</b-button>
+      </div>
 
-    <NotesList />
+      <NotesList />
 
-    <nuxt-child></nuxt-child>
+      <nuxt-child></nuxt-child>
 
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>

@@ -52,7 +52,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['openNotesSidebar', 'notes']),
+    ...mapState(['openNotesSidebar', 'notes', 'currentUser']),
     open: {
       get() {
         return this.openNotesSidebar
@@ -66,7 +66,7 @@ export default {
     ...mapMutations(['setNotesSidebarState'])
   },
   async fetch() {
-    const notesList = await this.$axios.$get('/api/notes')
+    const notesList = await this.$axios.$get('/api/notes', { headers: { 'Authorization': 'Bearer ' + this.currentUser.token.access_token } })
     this.$nuxt.context.store.commit('getNotes', notesList)
   }
 }

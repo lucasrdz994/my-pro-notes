@@ -1,11 +1,28 @@
 <template>
-  <section class="is-flex is-justify-content-center is-align-items-center has-text-centered">
-    <div class="content">
-      <img src="~/static/bg-2.svg" width="50%" alt="">
-      <h3 class="title mt-3">Visita la seccion de notas</h3>
-      <p>Accede a la app de notas. Próximamente verás una landing page en esta ruta.</p>
-      <b-button icon-left="book" type="is-primary" tag="nuxt-link" to="/notes">Ir a las notas</b-button>
+  <section>
+    
+    <div class="hero is-large home-hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-1">
+            A simple way to write amazing notes
+          </h1>
+          <h2 class="subtitle is-3">
+            Write more, don't pay
+          </h2>
+          <b-button type="is-primary" icon-left="github" tag="a" target="_blank" href="https://github.com/lucasrdz994/my-pro-notes">View on Github</b-button>
+        </div>
+      </div>
     </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+      <p>
+        Made with <strong>Nuxt + PHP</strong> by <a href="https://github.com/lucasrdz994">Lucas Rodríguez</a> and <a href="https://github.com/lucasrdz994">Leo Ruiz</a>.
+      </p>
+    </div>
+  </footer>
+
 
   </section>
 </template>
@@ -18,5 +35,10 @@ export default {
 </script>
 
 <style>
-
+  .home-hero {
+    background: url('~static/bg-hero.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 40px hsl(0, 0%, 86%);
+  }
 </style>

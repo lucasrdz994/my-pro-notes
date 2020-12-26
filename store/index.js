@@ -50,7 +50,7 @@ export const actions = {
           updated_at: String(Date.now())
           }
       }
-      const data = await this.$axios.$post('/api/notes', editedNote)
+      const data = await this.$axios.$post('/api/notes', editedNote, { headers: { 'Authorization': 'Bearer ' + state.currentUser.token.access_token } })
       const updatedNote = { ...data.response }
       commit('saveUpdatedNote', updatedNote)
       commit('cleanUpdatingNote')
@@ -58,7 +58,7 @@ export const actions = {
       console.log(error)
     }
   },
-  async POST_NOTE({commit}) {
+  async POST_NOTE({commit, state}) {
     try {
       const newNote = {
         method: "post",
@@ -69,7 +69,7 @@ export const actions = {
           updated_at: String(Date.now())
           }
       }
-      const data = await this.$axios.$post('/api/notes', newNote)
+      const data = await this.$axios.$post('/api/notes', newNote, { headers: { 'Authorization': 'Bearer ' + state.currentUser.token.access_token } })
       if (data.status !== 'created') throw new Error('La nota no se creo correctamente')
       const createdNote = { ...data.response }
       commit('setNewNote', createdNote)
@@ -78,13 +78,13 @@ export const actions = {
       console.log('Hubo un error', error)
     }
   },
-  async DELETE_NOTE({commit}, id) {
+  async DELETE_NOTE({commit, state}, id) {
     try {
       const noteReq = {
         method: "delete",
         body: { id }
       }
-      const res = await this.$axios.$post('/api/notes', noteReq)
+      const res = await this.$axios.$post('/api/notes', noteReq, { headers: { 'Authorization': 'Bearer ' + state.currentUser.token.access_token } })
       if (res.status !== 'ok') throw new Error('La nota no se elimino correctamente')
       $nuxt.$router.push('/notes')
       commit('removeNote', id)

@@ -1,5 +1,20 @@
 # my-pro-notes
 
+A simple way to write amazing notes.
+
+SPA developed with **Nuxt**
+
+Addons and utilities:
+- Tiptap for Rich-Text Editor [link](https://tiptap.dev/)
+- Buefy for UI [link](https://buefy.org/)
+- Nuxt Axios [link](https://axios.nuxtjs.org/)
+- Netlify Identity Widget [link](https://github.com/netlify/netlify-identity-widget)
+
+Deployed with Netlify
+[Demo](https://affectionate-lovelace-c030fc.netlify.app/)
+
+Backend made with **PHP & MySQL** my Leo Ruiz ([View Source](https://github.com/))
+
 ## Build Setup
 
 ```bash

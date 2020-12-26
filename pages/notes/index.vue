@@ -5,18 +5,21 @@
         <img src="~static/bg-2.svg" width="50%" alt="">
         <h3 class="is-size-3 mt-2">Crea una nueva nota</h3>
         <p>Comienza por crear una magnifica nueva nota y verás nunca dejarás de escribir.</p>
-        <b-button tag="nuxt-link" to="/notes" icon-left="pencil-outline" type="is-primary">Crear nueva nota</b-button>
+        <b-button tag="nuxt-link" to="/notes" icon-left="pencil-outline" type="is-primary" @click="POST_NOTE">Crear nueva nota</b-button>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   name: 'NotesIndex',
   computed: {
     ...mapState(['openNotesSidebar'])
+  },
+  methods: {
+    ...mapActions(['POST_NOTE'])
   }
 }
 </script>
